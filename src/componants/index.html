@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <input type="text" placeholder="Enter location" id="locationInput">
+        <div id="weatherInfo">
+            <h2 id="temperature">Loading...</h2>
+            <p id="date">Loading...</p>
+            <p id="condition">Loading...</p>
+            <p id="humidity">Loading...</p>
+            <p id="wind">Loading...</p>
+        </div>
+        <ul id="locationMenu">
+            <li>Birmingham</li>
+            <li>Manchester</li>
+            <li>New York</li>
+            <li>California</li>
+        </ul>
+    </div>
+
+    <script>
+        // Simulate fetching weather data (replace with actual API call)
+        setTimeout(() => {
+            document.getElementById('temperature').textContent = '31°C Mumbai';
+            document.getElementById('date').textContent = 'MONDAY, 5 Sep 19';
+            document.getElementById('condition').textContent = 'Smoke (Haze)';
+            document.getElementById('humidity').textContent = 'Humidity: 23%';
+            document.getElementById('wind').textContent = 'Wind: 3 km/h';
+        }, 2000); // Delay for demonstration purposes
+
+        // Add event listeners or additional functionality as needed
+    </script>
+</body>
+</html>

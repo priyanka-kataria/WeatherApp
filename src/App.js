@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useRef, useState } from 'react';
+import Fetchdata from './componants/Fetchdata';
+import Search from './componants/Search';
 
-function App() {
+function App () {
+   const onSearchchange=(searchdata)=>{
+    // console.log(searchdata)
+   }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <div className="container">
+        <input type="text" id="cityInput" placeholder="Enter city name" ref={ inputcity } />
+        <button onClick={ getWeather }>Get Weather</button>
+
+        
+        <Fetchdata/>
+      </div> */}
+      <Search onSearchchange={onSearchchange}/>
     </div>
   );
 }
